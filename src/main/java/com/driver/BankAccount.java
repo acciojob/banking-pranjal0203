@@ -52,8 +52,9 @@ public class BankAccount {
 
         } catch (Exception e) {
             System.out.println(e);
+            return "Account Number can not be generated";
         }
-        return null;
+        //return null;
     }
 
     public void deposit(double amount) {
@@ -67,7 +68,7 @@ public class BankAccount {
         // Remember to throw "Insufficient Balance" exception, if the remaining amount
         // would be less than minimum balance
         try {
-            if ((balance - amount) >= minBalance) {
+            if ((balance - amount) > minBalance) {
                 balance = balance - amount;
             } else {
                 throw new Exception("Insufficient Balance");
