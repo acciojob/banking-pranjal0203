@@ -37,7 +37,6 @@ public class BankAccount {
         // Generate account number having given number of 'digits' such that the sum of
         // digits is equal to 'sum'
         // If it is not possible, throw "Account Number can not be generated" exception
-
         try {
             int sumOfDigits = 0;
             while (digits != 0) {
